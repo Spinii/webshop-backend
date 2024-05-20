@@ -9,6 +9,11 @@ namespace WebshopBackend.Data
 {
     public class WebshopDBContext : DbContext
     {
+        public WebshopDBContext(DbContextOptions dbDonctextOptions) : base(dbDonctextOptions)
+        {
+            
+        }
+
         DbSet<Product> Products { get; set; }
 
         DbSet<Category> Categories { get; set; }
